@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--suppress ThymeleafVariablesResolveInspection-->
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<style th:fragment="style">
+    /*th {*/
+    /*    background-color: red;*/
+    /*}*/
+</style>
+<body th:fragment="body">
+<h2 th:text="${signName}">列表名称</h2>
+<table>
+    <thead>
+    <tr>
+        <th th:each="item: ${title}" th:text="${item}"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="arr:${signList}">
+        <td th:each="item: ${arr}" th:text="${item}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
